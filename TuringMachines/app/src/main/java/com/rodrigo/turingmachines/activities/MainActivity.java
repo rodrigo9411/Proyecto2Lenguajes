@@ -1,8 +1,11 @@
 package com.rodrigo.turingmachines.activities;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +17,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.rodrigo.turingmachines.R;
+import com.rodrigo.turingmachines.adapters.BeltAdapter;
+import com.rodrigo.turingmachines.objects.BeltItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private BeltAdapter adapter;
+    private RecyclerView rvBelt;
+    private List<BeltItem> belt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +46,25 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        rvBelt = findViewById(R.id.rvBelt);
+
+        belt = new ArrayList<>();
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("+",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+        belt.add(new BeltItem("l",""));
+
+        adapter = new BeltAdapter(this,belt);
+        rvBelt.setAdapter(adapter);
+        rvBelt.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        shuffle();
+
     }
 
     @Override
@@ -91,5 +122,35 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private int pos =0;
+
+    private void shuffle(){
+        if(pos<belt.size()){
+            new CountDownTimer(1000, 1000) {
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    // do something after 1s
+                }
+
+                @Override
+                public void onFinish() {
+                    // do something end times 5s
+                    belt.get(pos).setCurrentStatus("q");
+                    adapter.notifyItemChanged(pos);
+                    if(pos!=0){
+                        belt.get(pos-1).setCurrentStatus("");
+                        adapter.notifyItemChanged(pos-1);
+                    }
+
+                    pos++;
+                    shuffle();
+                }
+
+            }.start();
+        }
+
     }
 }
