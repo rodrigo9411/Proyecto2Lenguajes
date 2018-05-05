@@ -1,5 +1,6 @@
 package com.rodrigo.turingmachines.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity
     private BeltAdapter adapter;
     private RecyclerView rvBelt;
     private List<BeltItem> belt;
+
+    private String status ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,18 +108,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        Intent i;
+        if (id == R.id.nav_palindrome) {
+             i = new Intent(MainActivity.this,PalindromeActivity.class);
+             startActivity(i);
+        } else if (id == R.id.nav_pattern) {
+            i = new Intent(MainActivity.this,PatternsActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_addition) {
+            i = new Intent(MainActivity.this,AdditionActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_substr) {
+            i = new Intent(MainActivity.this,SubstractionActivity.class);
+            startActivity(i);
+        } else if (id == R.id.nav_multi) {
+            i = new Intent(MainActivity.this,MultiplicationActivity.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -138,12 +145,12 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onFinish() {
                     // do something end times 5s
-                    belt.get(pos).setCurrentStatus("q");
-                    adapter.notifyItemChanged(pos);
                     if(pos!=0){
                         belt.get(pos-1).setCurrentStatus("");
-                        adapter.notifyItemChanged(pos-1);
                     }
+                    belt.get(pos).setCurrentStatus("q");
+                    adapter.notifyDataSetChanged();
+
 
                     pos++;
                     shuffle();

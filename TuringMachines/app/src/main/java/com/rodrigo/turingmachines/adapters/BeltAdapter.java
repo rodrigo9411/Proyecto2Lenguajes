@@ -47,6 +47,8 @@ public class BeltAdapter extends  RecyclerView.Adapter<BeltAdapter.ViewHolder> {
         textViewStatus.setText(item.getCurrentStatus().trim());
         if(item.getCurrentStatus().trim().contains("q")){
             textViewText.setBackground(mContext.getDrawable(R.drawable.current_square));
+        }else{
+            textViewText.setBackground(mContext.getDrawable(R.drawable.square));
         }
 
 
