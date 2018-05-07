@@ -13,5 +13,7 @@
     <string name="menu_substraction">Resta Unaria</string>
     <string name="menu_multiplication">Multiplicación Unaria</string>
 
+    <string name="movements">Número de movimientos:</string>
+
 
 </resources>

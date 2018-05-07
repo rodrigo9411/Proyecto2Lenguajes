@@ -54,6 +54,7 @@ public class PalindromeActivity extends AppCompatActivity{
 
     private String input;
     private int position;
+    private int movements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,8 @@ public class PalindromeActivity extends AppCompatActivity{
 
     private void operate(){
         status = Q0;
+        movements = 0;
+        binding.tvMovements.setText(String.valueOf(movements));
         belt = new ArrayList<>();
 
         belt.add(new BeltItem("B",""));
@@ -91,12 +94,13 @@ public class PalindromeActivity extends AppCompatActivity{
         binding.rvBelt.setAdapter(adapter);
         binding.rvBelt.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        position = 0;
+        position = 1;
         direction = RIGHT;
         shuffle();
     }
 
     private void shuffle(){
+
         new CountDownTimer(1000, 1000) {
 
             @Override
@@ -107,31 +111,51 @@ public class PalindromeActivity extends AppCompatActivity{
             @Override
             public void onFinish() {
                 // do something end times 5s
-                if(!status.equals(Q11)||!status.equals(REJECTED)){
+                if(!status.equals(Q11) && !status.equals(REJECTED)){
 
 
 
                     if(direction.equals(RIGHT)){
                         if(position!=0){
-                            belt.get(position-1).setCurrentStatus("");
+                            belt.get(position).setCurrentStatus("");
                         }
                         belt.get(position).setText(machine(belt.get(position).getText()));
+
+                        if(direction.equals(RIGHT)){
+                            position++;
+                        }else{
+                            position--;
+                        }
                         belt.get(position).setCurrentStatus(status);
-                        position++;
                     }else if(direction.equals(LEFT)){
                         if(position!=0){
-                            belt.get(position+1).setCurrentStatus("");
+                            belt.get(position).setCurrentStatus("");
                         }
                         belt.get(position).setText(machine(belt.get(position).getText()));
-                        belt.get(position).setCurrentStatus(status);
-                        position--;
-                        if(position<0){
-                            position = 0;
+
+                        if(direction.equals(RIGHT)){
+                            position++;
+                        }else{
+                            position--;
+                            if(position<0){
+                                position = 0;
+                            }
                         }
+                        belt.get(position).setCurrentStatus(status);
+
                     }
+                    movements++;
+                    binding.tvMovements.setText(String.valueOf(movements));
                     adapter.notifyDataSetChanged();
 
                     shuffle();
+                }
+                else if(status.equals(Q11)){
+                    belt.get(position).setCurrentStatus(ACCEPTED);
+                    adapter.notifyDataSetChanged();
+                }else if (status.equals(REJECTED)){
+                    belt.get(position).setCurrentStatus(REJECTED);
+                    adapter.notifyDataSetChanged();
                 }
 
             }

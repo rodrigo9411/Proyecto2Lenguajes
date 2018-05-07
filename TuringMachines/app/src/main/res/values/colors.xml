@@ -5,4 +5,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#212121</color>
+    <color name="colorAccepted">#388E3C</color>
+    <color name="colorRejected">#F44336</color>
+
 </resources>
