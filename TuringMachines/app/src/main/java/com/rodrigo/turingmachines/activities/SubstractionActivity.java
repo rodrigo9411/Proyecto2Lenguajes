@@ -333,7 +333,9 @@ public class SubstractionActivity extends AppCompatActivity {
                         return BLANK;
 
                     case BLANK:
-                        return REJECTED;
+                        status = Q7;
+                        direction = RIGHT;
+                        return ONE;
 
                     case X:
                         status = Q6;
