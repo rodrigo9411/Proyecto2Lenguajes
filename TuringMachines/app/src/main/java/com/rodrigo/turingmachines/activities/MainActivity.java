@@ -27,11 +27,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private BeltAdapter adapter;
-    private RecyclerView rvBelt;
-    private List<BeltItem> belt;
-
-    private String status ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,23 +45,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        rvBelt = findViewById(R.id.rvBelt);
 
-        belt = new ArrayList<>();
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("+",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-        belt.add(new BeltItem("l",""));
-
-        adapter = new BeltAdapter(this,belt);
-        rvBelt.setAdapter(adapter);
-        rvBelt.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        shuffle();
 
     }
 
@@ -131,33 +110,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private int pos =0;
-
-    private void shuffle(){
-        if(pos<belt.size()){
-            new CountDownTimer(1000, 1000) {
-
-                @Override
-                public void onTick(long millisUntilFinished) {
-                    // do something after 1s
-                }
-
-                @Override
-                public void onFinish() {
-                    // do something end times 5s
-                    if(pos!=0){
-                        belt.get(pos-1).setCurrentStatus("");
-                    }
-                    belt.get(pos).setCurrentStatus("q");
-                    adapter.notifyDataSetChanged();
 
 
-                    pos++;
-                    shuffle();
-                }
-
-            }.start();
-        }
-
-    }
 }

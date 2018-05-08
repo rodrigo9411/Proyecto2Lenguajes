@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
+import android.view.inputmethod.InputMethodManager;
 
 import com.jakewharton.rxbinding2.view.RxView;
 import com.rodrigo.turingmachines.R;
@@ -55,6 +57,14 @@ public class AdditionActivity extends AppCompatActivity {
 
         RxView.clicks(binding.btnStart)
                 .subscribe(aVoid -> {
+
+                    try {
+                        InputMethodManager imm = (InputMethodManager) this.getSystemService(INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+                    } catch (Exception e) {
+                        Log.i("Keyboard","Keyboard was closed");
+                    }
+
                     input = binding.etInput.getText().toString().trim();
                     operate();
                 });
