@@ -423,17 +423,21 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
-
+                        status = Q10;
+                        direction = LEFT;
+                        return ONE;
                     case TIMES:
-
+                        return REJECTED;
                     case EQUALS:
-
+                        return REJECTED;
                     case X:
-
+                        return REJECTED;
                     case Y:
-
+                        status = Q11;
+                        direction = RIGHT;
+                        return Y;
                     case BLANK:
-
+                        return REJECTED;
                     default:
                         return REJECTED;
 
@@ -445,17 +449,21 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
-
+                        status = Q10;
+                        direction = LEFT;
+                        return ONE;
                     case TIMES:
-
+                        return REJECTED;
                     case EQUALS:
-
+                        return REJECTED;
                     case X:
-
+                        return REJECTED;
                     case Y:
-
+                        status = Q5;
+                        direction = RIGHT;
+                        return Y;
                     case BLANK:
-
+                        return REJECTED;
                     default:
                         return REJECTED;
 
@@ -467,17 +475,21 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
-
+                        return REJECTED;
                     case TIMES:
-
+                        status = Q11;
+                        direction = RIGHT;
+                        return TIMES;
                     case EQUALS:
-
+                        return REJECTED;
                     case X:
-
+                        status = Q3;
+                        direction = RIGHT;
+                        return X;
                     case Y:
-
+                        return REJECTED;
                     case BLANK:
-
+                        return REJECTED;
                     default:
                         return REJECTED;
 
@@ -489,17 +501,27 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
-
+                        status = Q12;
+                        direction = LEFT;
+                        return ONE;
                     case TIMES:
-
+                        status = Q12;
+                        direction = LEFT;
+                        return BLANK;
                     case EQUALS:
-
+                        return REJECTED;
                     case X:
-
+                        status = Q12;
+                        direction = LEFT;
+                        return BLANK;
                     case Y:
-
+                        status = Q12;
+                        direction = LEFT;
+                        return BLANK;
                     case BLANK:
-
+                        status = Q13;
+                        direction = LEFT;
+                        return BLANK;
                     default:
                         return REJECTED;
 
@@ -511,22 +533,26 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
-
+                        return ACCEPTED;
                     case TIMES:
-
+                        return ACCEPTED;
                     case EQUALS:
-
+                        return ACCEPTED;
                     case X:
-
+                        return ACCEPTED;
                     case Y:
-
+                        return ACCEPTED;
                     case BLANK:
-
+                        return ACCEPTED;
                     default:
                         return REJECTED;
 
 
                 }
+
+            default:
+                status = REJECTED;
+                return REJECTED;
         }
     }
 
