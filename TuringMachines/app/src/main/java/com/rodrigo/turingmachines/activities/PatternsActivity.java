@@ -733,7 +733,7 @@ public class PatternsActivity extends AppCompatActivity{
                     case C:
                         status = Q16;
                         direction = RIGHT;
-                        return X;
+                        return C;
                         
                     case X:
                         return REJECTED;
@@ -743,7 +743,7 @@ public class PatternsActivity extends AppCompatActivity{
                         
                     case BLANK:
                         status = Q17;
-                        direction = RIGHT;
+                        direction = LEFT;
                         return BLANK;
                         
                     default:
