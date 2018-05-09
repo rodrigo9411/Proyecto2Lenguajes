@@ -196,15 +196,19 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
                 }
@@ -230,9 +234,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
@@ -242,6 +248,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return Y;
 
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -264,9 +271,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
@@ -274,6 +283,7 @@ public class PatternsActivity extends AppCompatActivity{
                         direction = RIGHT;
                         return BLANK;
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -296,15 +306,19 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -327,6 +341,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return X;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -335,9 +350,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return Y;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -360,6 +377,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -374,6 +392,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return A;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -396,6 +415,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -410,6 +430,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return B;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -432,6 +453,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -446,6 +468,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -478,9 +501,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return Y;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -513,9 +538,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return Y;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -548,9 +575,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return Y;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -573,9 +602,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
@@ -584,6 +615,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return BLANK;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -606,15 +638,19 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -637,6 +673,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -645,9 +682,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return A;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -670,6 +709,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -678,9 +718,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return B;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -703,6 +745,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
@@ -711,9 +754,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -736,9 +781,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return C;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:
@@ -747,6 +794,7 @@ public class PatternsActivity extends AppCompatActivity{
                         return BLANK;
                         
                     default:
+                        status = REJECTED;
                         return REJECTED;
                         
                 }
@@ -763,9 +811,11 @@ public class PatternsActivity extends AppCompatActivity{
                         return ACCEPTED;
                         
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                         
                     case BLANK:

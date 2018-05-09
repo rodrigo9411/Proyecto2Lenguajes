@@ -176,15 +176,19 @@ public class SubstractionActivity extends AppCompatActivity {
                         return ONE;
 
                     case MINUS:
+                        status = REJECTED;
                         return REJECTED;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     case X:
+                        status = REJECTED;
                         return REJECTED;
 
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
@@ -207,12 +211,15 @@ public class SubstractionActivity extends AppCompatActivity {
                         return MINUS;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     case X:
+                        status = REJECTED;
                         return REJECTED;
 
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
@@ -229,6 +236,7 @@ public class SubstractionActivity extends AppCompatActivity {
                         return X;
 
                     case MINUS:
+                        status = REJECTED;
                         return REJECTED;
 
                     case BLANK:
@@ -242,6 +250,7 @@ public class SubstractionActivity extends AppCompatActivity {
                         return X;
 
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
@@ -253,6 +262,7 @@ public class SubstractionActivity extends AppCompatActivity {
             case Q3:
                 switch (text){
                     case ONE:
+                        status = REJECTED;
                         return REJECTED;
 
                     case MINUS:
@@ -261,6 +271,7 @@ public class SubstractionActivity extends AppCompatActivity {
                         return MINUS;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     case X:
@@ -269,6 +280,7 @@ public class SubstractionActivity extends AppCompatActivity {
                         return X;
 
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
@@ -285,12 +297,15 @@ public class SubstractionActivity extends AppCompatActivity {
                         return Y;
 
                     case MINUS:
+                        status = REJECTED;
                         return REJECTED;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     case X:
+                        status = REJECTED;
                         return REJECTED;
 
                     case Y:
@@ -306,6 +321,7 @@ public class SubstractionActivity extends AppCompatActivity {
             case Q5:
                 switch (text){
                     case ONE:
+                        status = REJECTED;
                         return REJECTED;
 
                     case MINUS:
@@ -314,9 +330,11 @@ public class SubstractionActivity extends AppCompatActivity {
                         return MINUS;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     case X:
+                        status = REJECTED;
                         return REJECTED;
 
                     case Y:

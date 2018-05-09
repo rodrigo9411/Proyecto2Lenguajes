@@ -200,305 +200,305 @@ public class PalindromeActivity extends AppCompatActivity{
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
-                
+
+
             case Q1:
                 switch (text){
                     case A:
                         status = Q4;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q4;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q4;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q11;
                         direction = RIGHT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q2:
                 switch (text){
                     case A:
                         status = Q5;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q5;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q5;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q11;
                         direction = RIGHT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q3:
                 switch (text){
                     case A:
                         status = Q6;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q6;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q6;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q11;
                         direction = RIGHT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q4:
                 switch (text){
                     case A:
                         status = Q4;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q4;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q4;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q7;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q5:
                 switch (text){
                     case A:
                         status = Q5;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q5;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q5;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q8;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q6:
                 switch (text){
                     case A:
                         status = Q6;
                         direction = RIGHT;
                         return A;
-                        
+
                     case B:
                         status = Q6;
                         direction = RIGHT;
                         return B;
-                        
+
                     case C:
                         status = Q6;
                         direction = RIGHT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q9;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q7:
                 switch (text){
                     case A:
                         status = Q10;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     case B:
                         status = REJECTED;
                         return B;
-                        
+
                     case C:
                         status = REJECTED;
                         return C;
-                        
+
                     case BLANK:
                         status = REJECTED;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q8:
                 switch (text){
                     case A:
                         status = REJECTED;
                         return A;
-                        
+
                     case B:
                         status = Q10;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     case C:
                         status = REJECTED;
                         return C;
-                        
+
                     case BLANK:
                         status = REJECTED;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q9:
                 switch (text){
                     case A:
                         status = REJECTED;
                         return A;
-                        
+
                     case B:
                         status = REJECTED;
                         return B;
-                        
+
                     case C:
                         status = Q10;
                         direction = LEFT;
                         return BLANK;
-                        
+
                     case BLANK:
                         status = REJECTED;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q10:
                 switch (text){
                     case A:
                         status = Q10;
                         direction = LEFT;
                         return A;
-                        
+
                     case B:
                         status = Q10;
                         direction = LEFT;
                         return B;
-                        
+
                     case C:
                         status = Q10;
                         direction = LEFT;
                         return C;
-                        
+
                     case BLANK:
                         status = Q0;
                         direction = RIGHT;
                         return BLANK;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
             case Q11:
                 switch (text){
                     case A:
                         return ACCEPTED;
-                        
+
                     case B:
                         return ACCEPTED;
-                        
+
                     case C:
                         return ACCEPTED;
-                        
+
                     case BLANK:
                         return ACCEPTED;
-                        
+
                     default:
                         status = REJECTED;
                         return REJECTED;
-                        
+
                 }
-                
+
 
             default:
                 status = REJECTED;
-                        return REJECTED;
+                return REJECTED;
                 
         }
     }

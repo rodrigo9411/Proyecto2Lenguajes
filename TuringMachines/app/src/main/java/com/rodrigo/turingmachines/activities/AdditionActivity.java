@@ -172,9 +172,11 @@ public class AdditionActivity extends AppCompatActivity {
                         return ONE;
 
                     case PLUS:
+                        status = REJECTED;
                         return REJECTED;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:
@@ -197,6 +199,7 @@ public class AdditionActivity extends AppCompatActivity {
                         return ONE;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
                         status = REJECTED;
@@ -212,6 +215,7 @@ public class AdditionActivity extends AppCompatActivity {
                         return ONE;
 
                     case PLUS:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
                         status = Q3;
@@ -232,9 +236,11 @@ public class AdditionActivity extends AppCompatActivity {
                         return BLANK;
 
                     case PLUS:
+                        status = REJECTED;
                         return REJECTED;
 
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
 
                     default:

@@ -179,16 +179,22 @@ public class MultiplicationActivity extends AppCompatActivity {
                         return ONE;
 
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -208,10 +214,13 @@ public class MultiplicationActivity extends AppCompatActivity {
                         return TIMES;
 
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
                         status = Q2;
@@ -219,6 +228,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         belt.add(new BeltItem(BLANK,""));
                         return EQUALS;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -239,14 +249,19 @@ public class MultiplicationActivity extends AppCompatActivity {
                         return TIMES;
 
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -261,6 +276,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return X;
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
                         status = Q12;
@@ -271,10 +287,13 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = RIGHT;
                         return X;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -309,6 +328,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = RIGHT;
                         return BLANK;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -323,18 +343,23 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = RIGHT;
                         return Y;
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
                         status = Q5;
                         direction = RIGHT;
                         return Y;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -361,6 +386,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = RIGHT;
                         return X;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
                         status = Q7;
@@ -368,6 +394,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         belt.add(new BeltItem(BLANK,""));
                         return ONE;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -382,18 +409,23 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return ONE;
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
                         status = Q8;
                         direction = LEFT;
                         return EQUALS;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -412,16 +444,20 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return TIMES;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
                         status = Q8;
                         direction = LEFT;
                         return X;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -436,18 +472,23 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return ONE;
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
                         status = Q11;
                         direction = RIGHT;
                         return Y;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -462,18 +503,23 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return ONE;
                     case TIMES:
+                        status = REJECTED;
                         return REJECTED;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
+                        status = REJECTED;
                         return REJECTED;
                     case Y:
                         status = Q5;
                         direction = RIGHT;
                         return Y;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -484,22 +530,27 @@ public class MultiplicationActivity extends AppCompatActivity {
                 switch (text){
 
                     case ONE:
+                        status = REJECTED;
                         return REJECTED;
                     case TIMES:
                         status = Q11;
                         direction = RIGHT;
                         return TIMES;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
                         status = Q3;
                         direction = RIGHT;
                         return X;
                     case Y:
+                        status = REJECTED;
                         return REJECTED;
                     case BLANK:
+                        status = REJECTED;
                         return REJECTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -518,6 +569,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return BLANK;
                     case EQUALS:
+                        status = REJECTED;
                         return REJECTED;
                     case X:
                         status = Q12;
@@ -532,6 +584,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                         direction = LEFT;
                         return BLANK;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
@@ -554,6 +607,7 @@ public class MultiplicationActivity extends AppCompatActivity {
                     case BLANK:
                         return ACCEPTED;
                     default:
+                        status = REJECTED;
                         return REJECTED;
 
 
