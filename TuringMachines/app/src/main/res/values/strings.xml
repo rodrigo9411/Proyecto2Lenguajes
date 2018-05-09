@@ -7,13 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_palindrome">Palindromes</string>
+    <string name="menu_palindrome">Palindromos</string>
     <string name="menu_patters">Patrones</string>
     <string name="menu_addition">Suma Unaria</string>
     <string name="menu_substraction">Resta Unaria</string>
     <string name="menu_multiplication">Multiplicación Unaria</string>
 
     <string name="movements">Número de movimientos:</string>
+    <string name="title">Proyecto 2: Máquinas de Turing</string>
 
 
 </resources>
